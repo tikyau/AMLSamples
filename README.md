@@ -1,5 +1,17 @@
 
-# Contributing
+# Vienna-Samples
+
+This repository provides samples code for Azure Machine learning services python SDK
+
+<br>
+
+## Table of Contents
+
+* **Mnist-cnn** show how to train an E2E pipeline  on GPU based DSVM with inference done on Azure Container Instance using a convnet written pytorch.
+
+<br>
+
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
