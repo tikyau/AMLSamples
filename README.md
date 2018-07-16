@@ -1,5 +1,5 @@
 
-# Vienna-Samples
+# Vienna-samples
 
 This repository provides samples code for Azure Machine learning services python SDK
 
@@ -11,7 +11,13 @@ This repository provides samples code for Azure Machine learning services python
 
 <br>
 
-## Contributing
+## Contributing to Vienna-samples
+
+Your contribution is welcome.
+1. Fork the repro and create your branch from 'master'
+2. Complete the Contributor License Agreement ("CLA"), if you haven't done so already.
+
+## Contributing Licence Agreement
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
