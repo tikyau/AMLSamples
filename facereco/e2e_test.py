@@ -25,9 +25,11 @@ def test_loader(images_path):
             transforms.Compose([transforms.ToTensor()]))
     loader = DataLoader(dataset = dataset, batch_size = 1, shuffle=False)
     print('batch_size',loader.batch_size)
-    
-    m,c,w,h = len(os.listdir(images_path)),3,224,224
-    assert (m,c,h,w) == (loader.dataset.count, c,h,w)
+
+    m,c,w,h = 0,3,224,224
+    for i, (x,y) in enumerate(loader):
+        m+=x.size()[0]
+    assert (m,c,h,w) == (len(os.listdir(images_path)), c,h,w)
    
     print('test_loader test done')
     
