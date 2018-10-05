@@ -14,7 +14,7 @@ The overall architecture of the model  is depicted in the picture below, details
 
 ## Dataset 
 
-The FG-NET[4]  dataset contain multiple images per subject, thereby reflecting variability in age,  pose, illumination and expression. The sample used in this experiment is composed of 976 images of 82 subjects where subjects’ ages vary between 0 and 69. 
+The FG-NET[4]  dataset contain multiple images per subject, thereby reflecting variability in age,  pose, illumination and expression. The sample used in this experiment is composed of 976 images of 82 subjects where subjects ages vary between 0 and 69. 
 
 <img style='margin:60px;width: 60%;' 
 src='https://amlgitsamples.blob.core.windows.net/facereco/resources/fgnet.jpg'/>
@@ -22,7 +22,7 @@ src='https://amlgitsamples.blob.core.windows.net/facereco/resources/fgnet.jpg'/>
 Given the different types of appearance variations in the images, i.e gray-scale or color,and some of the color images have a color cast. The preprocessing that was done consist of:
 
   - Face alignments
-  - Image resize to (224,224,3) to match VGG-face network tensors iput
+  - Image resize to (224,224,3) to match VGG-face network tensors input shape.
   - Conversion of Images color into gray-scale  to mitigate the inﬂuence of inconsistent colors.
         
 To offload computation and make the notebook accessible, the processed images have been made available [here](https://amlgitsamples.blob.core.windows.net/facereco/training_set/fgnet).
@@ -40,7 +40,7 @@ The VGG-Face CNN descriptors are based on the VGG-Very-Deep-16 CNN architecture 
 is composed of a sequence of convolutional, pool, and fully-connected (FC) layers. The convolutional layers
 use filters of dimension 3 while the pool layers perform subsampling with a factor of 2. 
 
-The CNN features are extracted from the 1st fully connected layer resulting in a matrix of shape (976, 4096), at last we prform 2-normalization by dividing each component by the L2-norm of the feature vector as described by the authors in their paper[2] 
+The CNN features are extracted from the 1st fully connected layer resulting in a matrix of shape (976, 4096), at last we normalize each component by the L2-norm of the feature vector as described by the authors in their paper[2] 
 
 
 The architecture of
@@ -52,14 +52,14 @@ the VGG-Face network is shown below
 
 ### Step 3: Dimensionality reduction (pca.py)
 
-We project the extracted features in step 2 into an 25 latent dimensional space whilst keeping +80% of the explained variance.
+We project the extracted features in step 2 into a 40 latent dimensional space whilst keeping +80% of the explained variance.
 
 <img style='margin:60px;width: 60%;' 
 src='https://amlgitsamples.blob.core.windows.net/facereco/resources/pca.JPG'/>
 
 ### Step 4: Classification (classifier.py)
 
-In the last step, As opposed to the classifier tested by the authors[2] we chose to train an KNN classifier using 5 fold cross validation and finaly we report  mean training and tesitng accuracy across folds trough Azure ML run [5]. the results are comparable to the reported by the authors of the paper[2] 
+In the last step, we train a KNN classifier  using 5 fold cross validation and finaly we report  mean training and tesitng accuracy across folds trough Azure ML run [5]. the results are comparable to the experiment results reported by the authors of the paper[2] 
 
 <img style='margin:60px;width: 60%;' 
 src='https://amlgitsamples.blob.core.windows.net/facereco/resources/accuracy.PNG'/>

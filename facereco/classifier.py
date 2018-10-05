@@ -14,7 +14,6 @@ def fit_classifier(vggface_path,pca_path, output_path):
     """
     
     X = np.load(os.path.join(pca_path, 'X_latent.npy'))
-    print('pcas',X.shape)
     y = np.load(os.path.join(vggface_path, 'y.npy'))
     
     run = Run.get_submitted_run()
@@ -53,5 +52,4 @@ if __name__ == '__main__':
     os.makedirs(output_path, exist_ok=True)
     
     np.random.seed(123)
-    print('clf_path',output_path)
     fit_classifier(vggface_path,pca_path, output_path)
