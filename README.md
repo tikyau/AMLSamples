@@ -1,21 +1,16 @@
 
-# Vienna-samples
+# AML-samples
 
-This repository provides samples code for Azure Machine learning services python SDK
-
-<br>
-
-## Table of Contents
-
-* **Mnist-cnn** show how to train an E2E pipeline  on GPU based DSVM with inference done on Azure Container Instance using a convnet written pytorch.
+This repository provide samples on how to use Azure Machine learning services python SDK. For more information please visit the  [documentation](https://docs.microsoft.com/en-us/azure/machine-learning/service/)
 
 <br>
 
-## Contributing to Vienna-samples
+## Table of Samples
 
-Your contribution is welcome.
-1. Fork the repro and create your branch from 'master'
-2. Complete the Contributor License Agreement ("CLA"), if you haven't done so already.
+* **facereco** sample that demonstrates how to train an [Azure Machine learning pipeline](https://review.docs.microsoft.com/en-us/azure/machine-learning/service/concept-ml-pipelines?branch=master) using [Batch AI](https://azure.microsoft.com/en-us/services/batch-ai/)
+
+<br>
+
 
 ## Contributing Licence Agreement
 
