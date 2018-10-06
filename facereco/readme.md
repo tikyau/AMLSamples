@@ -62,7 +62,7 @@ src='https://amlgitsamples.blob.core.windows.net/facereco/resources/pca.JPG'/>
 In the last step, we train a KNN classifier  using 5 fold cross validation and finaly we report  mean training and tesitng accuracy across folds trough Azure ML run [5]. the results are comparable to the experiment results reported by the authors of the paper[2] 
 
 <img style='margin:40px;width: 40%;' 
-src='https://amlgitsamples.blob.core.windows.net/facereco/resources/accuracy.PNG'/>
+src='https://amlgitsamples.blob.core.windows.net/facereco/resources/acc.PNG'/>
 
 
 
