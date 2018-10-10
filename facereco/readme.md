@@ -52,14 +52,14 @@ the VGG-Face network is shown below
 
 ### Step 3: Dimensionality reduction (pca.py)
 
-We project the extracted features in step 2 into a 40 latent dimensional space whilst keeping +80% of the explained variance.
+We project the extracted features in step 2 into a 40 latent dimensional space whilst retaining +80% of the explained variance.
 
 <img style='margin:40px;width: 40%;' 
 src='https://amlgitsamples.blob.core.windows.net/facereco/resources/pca.JPG'/>
 
 ### Step 4: Classification (classifier.py)
 
-In the last step, we train a KNN classifier  using 5 fold cross validation and finaly we report  mean training and tesitng accuracy across folds trough Azure ML run [5]. the results are comparable to the experiment results reported by the authors of the paper[2] 
+In the last step, we train a KNN classifier  using 5 fold cross validation and finaly we report  mean training and testing accuracy across folds trough Azure ML run [5]. the results are comparable to the experiment results reported by the authors of the paper[2] 
 
 <img style='margin:40px;width: 40%;' 
 src='https://amlgitsamples.blob.core.windows.net/facereco/resources/acc.PNG'/>
